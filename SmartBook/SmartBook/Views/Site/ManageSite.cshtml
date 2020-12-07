@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "ManageSite";
+}
+
+<h2>Site Managment</h2>
+<div>
+    <h4>Hello Admin, you can manage every entity from here.</h4>
+    <hr />
+    <h7>
+        <li>@Html.ActionLink("Manage Role", "GetAllRoles", "Role")</li>
+        <li>@Html.ActionLink("Manage Users", "GetAllUsers", "User")</li>
+        <li>@Html.ActionLink("Manage Books", "BooksList", "Book")</li>
+        @*<li>@Html.ActionLink("Manage Writers", "GetAllWriters", "Writer")</li>*@
+        <li>@Html.ActionLink("Manage Pictures", "GetAllPictures", "Picture")</li>
+        <li>@Html.ActionLink("Forum", "GetAllComments", "Forum")</li>
+    </h7>
+
+</div>

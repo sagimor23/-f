@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SmartBook.Models.Comment>
+
+@{
+    ViewBag.Title = "Forum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Forum</h2>
+@if (ViewBag.isAdmin == "true" || ViewBag.isParent == "true")
+{
+    <p>
+        @Html.ActionLink("הוסף תגובה", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentDate)
+            </td>
+            <td>
+                @if (ViewBag.isAdmin == "true")
+                {
+
+                      @Html.ActionLink("Edit", "Edit", new { id = item.CommentId })
+                      @Html.ActionLink("Delete", "Delete", new { id = item.CommentId })
+                }
+
+                @if (ViewBag.isParent == "true")
+                {
+
+                      @Html.ActionLink("Edit", "Edit", new { id = item.CommentId })
+
+                }
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>

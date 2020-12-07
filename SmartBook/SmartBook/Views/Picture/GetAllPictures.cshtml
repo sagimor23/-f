@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<SmartBook.Models.Picture>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pictures:</h2>
+@if (ViewBag.isAdmin == "true")
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Picture Id", "GetAllPictures")
+        </th>
+        <th>
+            @Html.ActionLink("Picture Link", "GetAllPictures")
+        </th>
+        @if (ViewBag.isAdmin == "true")
+        {
+            <th></th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureId)
+            </td>
+            <td>
+			<img src="@item.PictureName" alt="Steak" style="width:30%">
+
+            </td>
+            @if (ViewBag.isAdmin == "true")
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PictureId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PictureId })
+                </td>
+            }
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,39 @@
+﻿@model SmartBook.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        @if (ViewBag.isAdmin == "true")
+        {
+            <h4>Welcome Admin. You can manage the site from here:</h4>
+            <button onclick="location.href='@Url.Action("ManageSite", "Site")';return false;">Manage Site</button>
+        }
+        @if (ViewBag.isParent == "true")
+        {
+            <h4>Welcome Parent. You can visit the parent forum here:</h4>
+            <button onclick="location.href='@Url.Action("GetAllComments", "Forum")';return false;">Forum</button>
+        }
+
+
+    </dl>
+</div>

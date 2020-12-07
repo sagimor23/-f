@@ -1,0 +1,87 @@
+﻿@model SmartBook.Models.Book
+
+@{
+    ViewBag.Title = "Book Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>פרטי הספר</h2>
+
+
+שם הספר: @Model.BookName
+<br />
+סופר: @Model.WriterName
+<br />
+שנת הוצאה לאור: @Model.YearOfPublish
+<br />
+תקציר: @Model.Summary
+<br />
+<img src="@Model.Picture.PictureName " alt="Steak" style="width:50%">
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<iframe src="@Model.BookUrl" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+@Html.ActionLink("הוסף תגובה חדשה", "CreataComment", Model)
+
+<table class="table">
+    <tr>
+        <th>
+            משתמש
+        </th>
+
+        <th>
+            תגובה
+        </th>
+
+        <th>
+            תאריך
+        </th>
+        <th>
+            דירוג
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+
+    @foreach (var item in Model.Review)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewRating)
+        </td>
+        @if (ViewBag.isAdmin == "true")
+        {
+        <td>
+            @Html.ActionLink("Delete", "DeleteComment", new { id = item.ReviewId })
+
+        </td>
+        }
+    </tr>
+    }
+
+
+</table>
+

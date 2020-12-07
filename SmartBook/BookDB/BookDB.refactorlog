@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="9917ef4c-53a9-4f53-a12c-6b6f19b29aa9" ChangeDateTime="01/05/2020 14:49:41">
+    <Property Name="ElementName" Value="[dbo].[Book].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Book]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="eed16620-2c31-4216-8e56-8f091596fef8" ChangeDateTime="01/05/2020 15:15:02">
+    <Property Name="ElementName" Value="[dbo].[Picture].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Picture]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PictureId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30029b51-79d5-4af2-bea8-3d2a3088e73b" ChangeDateTime="01/05/2020 15:19:22">
+    <Property Name="ElementName" Value="[dbo].[Review].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Review]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Review Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a5bedee-5207-4480-aa15-7f0b12f850b8" ChangeDateTime="01/05/2020 15:19:28">
+    <Property Name="ElementName" Value="[dbo].[Review].[Review Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Review]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ReviewId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a33adfe2-ff19-4757-858b-7f5ca978fd8c" ChangeDateTime="01/05/2020 15:24:28">
+    <Property Name="ElementName" Value="[dbo].[Writer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Writer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WriterId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a9452323-4e0f-4601-baac-8f1d5489e1c6" ChangeDateTime="01/10/2020 16:26:12">
+    <Property Name="ElementName" Value="[dbo].[Book].[Bookurl]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Book]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookUrl" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5353dd14-f006-45f5-94ca-b689b0b9c439" ChangeDateTime="01/10/2020 16:26:18">
+    <Property Name="ElementName" Value="[dbo].[Book].[WriterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Book]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WriterName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="35f6e270-d26b-4fd7-b1ef-778bfb497730" ChangeDateTime="01/13/2020 11:58:56">
+    <Property Name="ElementName" Value="[dbo].[Forum].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Forum]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CommentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a498adc-8f5d-45f3-881c-b1f1ab855ca7" ChangeDateTime="01/13/2020 12:03:18">
+    <Property Name="ElementName" Value="[dbo].[Forum].[ReviewText]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Forum]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CommentText" />
+  </Operation>
+</Operations>
